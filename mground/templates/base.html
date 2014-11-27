@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static "css/main.css" %}" /> 
+    <link rel="stylesheet" href="{% static "css/reset.css" %}" /> 
+  </head>
+  <body>
+    {% block nav %}
+      <div id="nav">
+        <div class="nav-inner">
+          <div id="nav-logo">
+            <a href="/mground/">
+              <div class="logo-title">Middle Ground</div>
+              <div class="logo-subtitle">MUSIC LICENSING</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    {% endblock %}
+
+    {% block content %}{% endblock %}
+  </body>
+  
+</html>

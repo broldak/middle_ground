@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="page-content">
+        <div class="page-title">
+            <h1>Register (it's free)</h1>
+        </div>
+        {% if registered %}
+            <h1>Thank you for registering!</h1><br />
+            <a href="/mground/">Return to the homepage.</a><br />
+        {% else %}
+            <form class="form" id="user_form" method="post" action="/mground/register/"
+                    enctype="multipart/form-data">
+
+                {% csrf_token %}
+
+                {{ user_form.as_p }}
+                {{ artist_form.as_p }}
+
+                <input class="primary-btn" type="submit" name="submit" value="Register" />
+            </form>
+        {% endif %}
+    </div>
+
+{% endblock %}
